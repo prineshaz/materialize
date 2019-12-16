@@ -1,5 +1,5 @@
 /*!
- * Materialize v0.100.2 (http://materializecss.com)
+ * Materialize vundefined (http://materializecss.com)
  * Copyright 2014-2017 Materialize
  * MIT License (https://raw.githubusercontent.com/Dogfalo/materialize/master/LICENSE)
  */
@@ -5013,6 +5013,10 @@ if (Vel) {
           options.find("li:not(.optgroup)").eq(index).find(":checkbox").prop("checked", true);
         });
       }
+
+      // Move actual select element into overflow hidden wrapper
+      var $hideSelect = $('<div class="hide-select"></div>');
+      $select.wrap($hideSelect);
 
       /**
        * Make option as selected and scroll to selected position

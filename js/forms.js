@@ -676,6 +676,10 @@
         });
       }
 
+      // Move actual select element into overflow hidden wrapper
+      var $hideSelect = $('<div class="hide-select"></div>');
+      $select.wrap($hideSelect);
+
       /**
        * Make option as selected and scroll to selected position
        * @param {jQuery} collection  Select options jQuery element
